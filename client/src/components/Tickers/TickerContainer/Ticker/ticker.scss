@@ -1,0 +1,70 @@
+@import "../../../../App/styles/variables";
+@import "../../../../App/styles/mixins.scss";
+
+.ticker {
+    @include flex_container-center;
+    width: 100%;
+    padding: 10px 0;
+
+    border-top: 1px solid $borderLightColor;
+
+    text-transform: uppercase;
+
+    &__item {
+        display: flex;
+        justify-content: flex-end;
+        width: 100px;
+
+        padding-right: 10px;
+    }
+
+    &__title {
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    &__exchange {
+        padding: 2px 3px;
+        margin-right: 10px;
+
+        border: 1px solid $borderDarkColor;
+        background: $hoverColor;
+        @include border_radius-8px;
+    }
+
+    &__name {
+        @include flex_container-center;
+
+        font-size: 12px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    &__price {
+        width: 130px;
+    }
+
+    &__rise {
+        color: $upPriceColor;
+        background: $upPriceBackgroundColor;
+    }
+
+    &__fall {
+        color: $dropPriceColor;
+        background: $dropPriceBackgroundColor;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.percent__container {
+    @include flex_container-center;
+    padding: 5px;
+
+    @include border_radius-8px;
+}
+

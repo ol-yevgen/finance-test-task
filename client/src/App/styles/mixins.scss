@@ -1,0 +1,20 @@
+@mixin flex_container-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin transition-8s {
+    transition: all 0.8s;
+}
+
+@mixin border_radius-8px {
+    border-radius: 8px;
+}
+
+@mixin info_title {
+    position: absolute;
+    font-size: 7px;
+    top: -80%;
+    left: 0;
+}

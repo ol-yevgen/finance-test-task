@@ -1,0 +1,91 @@
+@import "../../../../App/styles/variables";
+@import "../../../../App/styles/mixins.scss";
+
+.ticker__full {
+    width: 100%;
+    height: 200px;
+    padding-top: 20px;
+
+    &-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &-exchange {
+        position: relative;
+
+        &::before {
+            content: "Exchange";
+            @include info_title;
+        }
+    }
+
+    &-name {
+        position: relative;
+
+        &::before {
+            content: "Ticker";
+            @include info_title;
+        }
+    }
+
+    &-time {
+        position: relative;
+        margin-top: 20px;
+
+        &::before {
+            content: "Last trade time";
+            @include info_title;
+        }
+    }
+
+    &-middle {
+        margin-top: 20px;
+        @include flex_container-center;
+        justify-content: space-between;
+    }
+
+    &-change {
+        position: relative;
+        width: 100px;
+
+        &::before {
+            content: "Change";
+            @include info_title;
+        }
+    }
+
+    &-dividend {
+position: relative;
+
+        &::before {
+            content: "Dividend";
+            @include info_title;
+        }
+    }
+
+    &-yield {
+position: relative;
+
+        &::before {
+            content: "Yield";
+            @include info_title;
+        }
+    }
+
+    &-bottom {
+        margin-top: 20px;
+        @include flex_container-center;
+        justify-content: space-between;
+    }
+
+    &-percent {
+        position: relative;
+
+        &::before {
+            content: "Percent";
+            @include info_title;
+        }
+    }
+}

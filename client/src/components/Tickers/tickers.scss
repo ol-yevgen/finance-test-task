@@ -1,0 +1,12 @@
+@import "../../App/styles/variables";
+@import "../../App/styles/mixins.scss";
+@import './TickerContainer/Ticker/ticker.scss';
+@import './TickerContainer/TickerFullInfo/tickerFullInfo.scss';
+
+.tickers {
+    @include flex_container-center;
+    flex-direction: column;
+
+    width: 100%;
+}
+

@@ -1,0 +1,18 @@
+@import "../../../App/styles/variables";
+@import '../../../App//styles/mixins.scss';
+
+.delete__button {
+    @include flex_container-center;
+    background: none;
+    border: none;
+
+    @include transition-8s;
+
+    &:hover {
+        cursor: pointer;
+        
+        & > svg {
+            fill: $primaryColor;
+        }
+    }
+}

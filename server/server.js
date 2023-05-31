@@ -76,6 +76,24 @@ socketServer.on('connection', (socket) => {
   });
 });
 
+// Add new ticker
+socketServer.on('connection', (socket) => {
+    socket.on('addTicker', (data) => {
+        tickers.push(data);
+    });
+});
+
+// Delete ticker
+socketServer.on('connection', (socket) => {
+    socket.on('deleteTicker', (data) => {
+        const ticketIndex = tickers.findIndex((name) => name === data);
+        if (0 <= ticketIndex) {
+            tickers.splice(ticketIndex, 1);
+        }
+    });
+});
+
+
 server.listen(PORT, () => {
   console.log(`Streaming service is running on http://localhost:${PORT}`);
 });
